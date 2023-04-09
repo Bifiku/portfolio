@@ -164,7 +164,7 @@ button {
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 100%;
-  background-color: #02FE0E;
+  background: #02FE0E url(../icons/Star.svg) center/3.4rem no-repeat;
   border: 0.1rem solid rgba(1, 1, 1, 0.1);
   box-shadow: 0rem 0rem 1rem 0.2rem rgba(1, 1, 1, 0.07);
 }
