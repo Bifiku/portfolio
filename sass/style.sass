@@ -1,0 +1,152 @@
+@import "_fonts.sass"
+
+@mixin button-reset 
+    padding: 0
+    border: none
+    font: inherit
+    color: inherit
+    background-color: transparent
+    cursor: pointer
+
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// Основые цвета
+$color-black: #1E1E1E
+$color-white: #FFFFFF
+$color-green: #02FE0E
+
+html
+    font-size: 62.5%
+    font-family: "Montserrat"
+    font-weight: 400
+
+
+body
+    background: $color-black
+    font-size: 1.6rem
+    // padding-top: 3rem
+
+a
+    text-decoration: none
+    color: $color-white
+    &:hover, &:visited
+        color: $color-white
+
+ul
+    list-style-type: none
+    
+header
+    margin-bottom: 6rem
+
+nav
+    display: flex
+    position: relative
+    width: 100%
+    align-items: center
+    justify-content: center
+    height: 6rem
+    font-weight: 500
+    ul
+        display: flex    
+        li:not(:last-child)
+            margin-right: 4rem
+
+button
+    @include button-reset
+
+.container
+    display: block
+    margin: 0 auto
+    max-width: 120rem
+    height: 95vh
+    padding: 3rem
+    // background-color: red
+
+.border-line
+    position: absolute
+    right: 0
+    padding-right: 5rem
+    &::after
+        content: ""
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 19rem
+        height: 6rem
+        border: 1px $color-white solid
+        border-radius: 15px
+        z-index: 1
+
+.section-first
+    position: relative
+    &__main-box
+        width: 100%
+        height: 54rem
+        background: url(../img/background.svg) center/cover no-repeat
+        border-radius: 4rem
+        padding: 4.5rem 15rem
+        text-align: center
+    &__cards
+        display: flex
+        justify-content: center
+        position: relative
+        top: -5.5rem
+
+.title-h1
+    font-weight: 500
+    font-size: 4rem
+    margin-bottom: 3.3rem
+
+.logo
+    background: url(../img/logo.png) center/cover no-repeat
+    border-radius: 100%
+    width: 14rem
+    height: 14rem
+    margin: 0 auto
+    margin-bottom: 3.3rem
+
+.btn
+    width: 24rem
+    height: 7rem
+    color: $color-white
+    background-color: $color-black
+    border-radius: 1.5rem
+    font-size: 1.8rem
+
+.card
+    display: flex
+    position: relative
+    align-items: center
+    background-color: $color-white
+    width: 28rem
+    height: 13rem
+    border-radius: 2rem
+    font-weight: 500
+    font-size: 1.2rem
+    line-height: 1.5rem
+    padding: 4.8rem
+    &:not(:last-child)
+        margin-right: 4rem
+    &::after
+        content: ""
+        position: absolute 
+        width: 5.5rem
+        height: 5.5rem
+        top: 0
+        left: 0
+        transform: translate(-50%, -50%)
+        border-radius: 100%
+        background-color: $color-green
+        border: .1rem solid rgba(1, 1, 1, 0.1)
+        box-shadow: 0rem 0rem 1rem .2rem rgba(1, 1, 1, 0.07)
+    &__card-1
+        transform: rotate(-9deg)
+    &__card-2
+        transform: rotate(9deg)
+    &__card-3
+        transform: rotate(-6deg)
