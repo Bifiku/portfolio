@@ -28,6 +28,7 @@ html {
 body {
   background: #1E1E1E;
   font-size: 1.6rem;
+  height: 380rem;
 }
 
 a {
@@ -97,24 +98,6 @@ button {
   z-index: 1;
 }
 
-.section-first {
-  position: relative;
-}
-.section-first__main-box {
-  width: 100%;
-  height: 54rem;
-  background: url(../img/background.svg) center/cover no-repeat;
-  border-radius: 4rem;
-  padding: 4.5rem 15rem;
-  text-align: center;
-}
-.section-first__cards {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -5.5rem;
-}
-
 .title-h1 {
   font-weight: 500;
   font-size: 4rem;
@@ -138,6 +121,12 @@ button {
   border-radius: 1.5rem;
   font-size: 1.8rem;
 }
+.btn_circle {
+  background-color: #02FE0E;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 100%;
+}
 
 .card {
   display: flex;
@@ -155,7 +144,16 @@ button {
 .card:not(:last-child) {
   margin-right: 4rem;
 }
-.card::after {
+.card__card-1 {
+  transform: rotate(-9deg);
+}
+.card__card-2 {
+  transform: rotate(9deg);
+}
+.card__card-3 {
+  transform: rotate(-6deg);
+}
+.card_star::after {
   content: "";
   position: absolute;
   width: 5.5rem;
@@ -168,12 +166,30 @@ button {
   border: 0.1rem solid rgba(1, 1, 1, 0.1);
   box-shadow: 0rem 0rem 1rem 0.2rem rgba(1, 1, 1, 0.07);
 }
-.card__card-1 {
-  transform: rotate(-9deg);
+
+.section-first {
+  position: relative;
+  height: 54rem;
+  margin-bottom: 24rem;
 }
-.card__card-2 {
-  transform: rotate(9deg);
+.section-first__main-box {
+  width: 100%;
+  height: 54rem;
+  background: url(../img/background.svg) center/cover no-repeat;
+  border-radius: 4rem;
+  padding: 4.5rem 15rem;
+  text-align: center;
 }
-.card__card-3 {
-  transform: rotate(-6deg);
+.section-first__cards {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -5.5rem;
+}
+
+.section-second {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */
