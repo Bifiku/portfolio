@@ -120,12 +120,14 @@ button {
   background-color: #1E1E1E;
   border-radius: 1.5rem;
   font-size: 1.8rem;
+  z-index: 2;
 }
 .btn_circle {
   background-color: #02FE0E;
   width: 19rem;
   height: 19rem;
   border-radius: 100%;
+  font-size: 1.4rem;
 }
 
 .card {
@@ -152,6 +154,34 @@ button {
 }
 .card__card-3 {
   transform: rotate(-6deg);
+}
+.card__circle {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 2rem;
+  z-index: 0;
+}
+.card__circle_card-1 {
+  position: absolute;
+  background: none;
+  border: 0.2rem #FFFFFF dashed;
+  width: 30rem;
+  height: 16rem;
+  padding: 3rem 4rem;
+  left: 23rem;
+  top: -6rem;
+  transform: rotate(-5deg);
+}
+.card__circle_card-2 {
+  position: absolute;
+}
+.card__circle_card-3 {
+  position: absolute;
+}
+.card__circle_card-4 {
+  position: absolute;
 }
 .card_star::after {
   content: "";
@@ -191,5 +221,4 @@ button {
   position: relative;
   display: flex;
   justify-content: center;
-  z-index: 2;
 }/*# sourceMappingURL=style.css.map */

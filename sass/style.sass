@@ -103,11 +103,13 @@ button
     background-color: $color-black
     border-radius: 1.5rem
     font-size: 1.8rem
+    z-index: 2
     &_circle
         background-color: $color-green
         width: 19rem
         height: 19rem
         border-radius: 100%
+        font-size: 1.4rem
 
 .card
     display: flex
@@ -129,6 +131,29 @@ button
         transform: rotate(9deg)
     &__card-3
         transform: rotate(-6deg)
+    &__circle
+        position: relative
+        font-size: 1.6rem
+        font-weight: 500
+        color: $color-white
+        line-height: 2rem
+        z-index: 0
+        &_card-1
+            position: absolute
+            background: none
+            border: .2rem $color-white dashed
+            width: 30rem
+            height: 16rem
+            padding: 3rem 4rem
+            left: 23rem
+            top: -6rem
+            transform: rotate(-5deg)
+        &_card-2
+            position: absolute
+        &_card-3
+            position: absolute
+        &_card-4
+            position: absolute
     &_star
         &::after
             content: ""
@@ -165,4 +190,3 @@ button
     position: relative
     display: flex
     justify-content: center
-    z-index: 2
