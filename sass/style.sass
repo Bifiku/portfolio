@@ -16,8 +16,10 @@
 
 // Основые цвета
 $color-black: #1E1E1E
-$color-white: #FFFFFF
+$color-white: #F8F8F8
 $color-green: #02FE0E
+$color-blue: #1619CE
+$color-sky-blue: #36B5FC
 
 html
     font-size: 62.5%
@@ -84,9 +86,10 @@ button
         z-index: 1
 
 .title-h1
-    font-weight: 500
+    font-weight: 700
     font-size: 4rem
     margin-bottom: 3.3rem
+    color: $color-white
 
 .logo
     background: url(../img/logo.png) center/cover no-repeat
@@ -97,6 +100,7 @@ button
     margin-bottom: 3.3rem
 
 .btn
+    position: relative
     width: 24rem
     height: 7rem
     color: $color-white
@@ -105,11 +109,13 @@ button
     font-size: 1.8rem
     z-index: 2
     &_circle
-        background-color: $color-green
+        // background-color: $color-sky-blue
+        background: url(../img/IMAGE.png) center/cover no-repeat
         width: 19rem
         height: 19rem
         border-radius: 100%
         font-size: 1.4rem
+        box-shadow: 0rem -.6rem 4.5rem rgba(1, 1, 1, 0.2)
 
 .card
     display: flex
@@ -150,10 +156,31 @@ button
             transform: rotate(-5deg)
         &_card-2
             position: absolute
+            left: 62rem
+            top: -6rem
+            width: 25rem
+            height: 13rem
+            text-align: right
+            transform: rotate(-2.69deg)
         &_card-3
             position: absolute
+            left: 29rem
+            top: 13.5rem
+            width: 28rem
+            height: 12rem
+            color: $color-black
+            transform: rotate(4.98deg)
         &_card-4
             position: absolute
+            left: 62rem
+            top: 12.5rem
+            width: 24rem
+            height: 13rem
+            text-align: right
+            background: none
+            border: .2rem $color-white dashed   
+            padding: 3rem 4rem
+            transform: rotate(7.51deg)
     &_star
         &::after
             content: ""
@@ -164,10 +191,10 @@ button
             left: 0
             transform: translate(-50%, -50%)
             border-radius: 100%
-            // background-color: $color-green
-            background: $color-green url(../icons/Star.svg) center/3.4rem no-repeat
-            border: .1rem solid rgba(1, 1, 1, 0.1)
+            background: $color-sky-blue url(../icons/Star.svg) center/3.4rem no-repeat
             box-shadow: 0rem 0rem 1rem .2rem rgba(1, 1, 1, 0.07)
+.blue
+    background-color: $color-blue
 
 .section-first
     position: relative
@@ -176,7 +203,7 @@ button
     &__main-box
         width: 100%
         height: 54rem
-        background: url(../img/background.svg) center/cover no-repeat
+        background: url(../img/background.png) center/contain no-repeat
         border-radius: 4rem
         padding: 4.5rem 15rem
         text-align: center
@@ -190,3 +217,15 @@ button
     position: relative
     display: flex
     justify-content: center
+    &__content
+        height: 20rem
+
+.section-third
+    // position: relative
+    // display: flex
+    // justify-content: center
+    &__grey-box
+        width: 100%
+        height: 36rem
+        background-color: red
+

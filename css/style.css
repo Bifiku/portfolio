@@ -33,10 +33,10 @@ body {
 
 a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #F8F8F8;
 }
 a:hover, a:visited {
-  color: #FFFFFF;
+  color: #F8F8F8;
 }
 
 ul {
@@ -93,15 +93,16 @@ button {
   transform: translateY(-50%);
   width: 19rem;
   height: 6rem;
-  border: 1px #FFFFFF solid;
+  border: 1px #F8F8F8 solid;
   border-radius: 15px;
   z-index: 1;
 }
 
 .title-h1 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 4rem;
   margin-bottom: 3.3rem;
+  color: #F8F8F8;
 }
 
 .logo {
@@ -114,27 +115,29 @@ button {
 }
 
 .btn {
+  position: relative;
   width: 24rem;
   height: 7rem;
-  color: #FFFFFF;
+  color: #F8F8F8;
   background-color: #1E1E1E;
   border-radius: 1.5rem;
   font-size: 1.8rem;
   z-index: 2;
 }
 .btn_circle {
-  background-color: #02FE0E;
+  background: url(../img/IMAGE.png) center/cover no-repeat;
   width: 19rem;
   height: 19rem;
   border-radius: 100%;
   font-size: 1.4rem;
+  box-shadow: 0rem -0.6rem 4.5rem rgba(1, 1, 1, 0.2);
 }
 
 .card {
   display: flex;
   position: relative;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #F8F8F8;
   width: 28rem;
   height: 13rem;
   border-radius: 2rem;
@@ -159,14 +162,14 @@ button {
   position: relative;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #F8F8F8;
   line-height: 2rem;
   z-index: 0;
 }
 .card__circle_card-1 {
   position: absolute;
   background: none;
-  border: 0.2rem #FFFFFF dashed;
+  border: 0.2rem #F8F8F8 dashed;
   width: 30rem;
   height: 16rem;
   padding: 3rem 4rem;
@@ -176,12 +179,33 @@ button {
 }
 .card__circle_card-2 {
   position: absolute;
+  left: 62rem;
+  top: -6rem;
+  width: 25rem;
+  height: 13rem;
+  text-align: right;
+  transform: rotate(-2.69deg);
 }
 .card__circle_card-3 {
   position: absolute;
+  left: 29rem;
+  top: 13.5rem;
+  width: 28rem;
+  height: 12rem;
+  color: #1E1E1E;
+  transform: rotate(4.98deg);
 }
 .card__circle_card-4 {
   position: absolute;
+  left: 62rem;
+  top: 12.5rem;
+  width: 24rem;
+  height: 13rem;
+  text-align: right;
+  background: none;
+  border: 0.2rem #F8F8F8 dashed;
+  padding: 3rem 4rem;
+  transform: rotate(7.51deg);
 }
 .card_star::after {
   content: "";
@@ -192,9 +216,12 @@ button {
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 100%;
-  background: #02FE0E url(../icons/Star.svg) center/3.4rem no-repeat;
-  border: 0.1rem solid rgba(1, 1, 1, 0.1);
+  background: #36B5FC url(../icons/Star.svg) center/3.4rem no-repeat;
   box-shadow: 0rem 0rem 1rem 0.2rem rgba(1, 1, 1, 0.07);
+}
+
+.blue {
+  background-color: #1619CE;
 }
 
 .section-first {
@@ -205,7 +232,7 @@ button {
 .section-first__main-box {
   width: 100%;
   height: 54rem;
-  background: url(../img/background.svg) center/cover no-repeat;
+  background: url(../img/background.png) center/contain no-repeat;
   border-radius: 4rem;
   padding: 4.5rem 15rem;
   text-align: center;
@@ -221,4 +248,13 @@ button {
   position: relative;
   display: flex;
   justify-content: center;
+}
+.section-second__content {
+  height: 20rem;
+}
+
+.section-third__grey-box {
+  width: 100%;
+  height: 36rem;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
