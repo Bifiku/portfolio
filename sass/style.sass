@@ -15,7 +15,8 @@
     box-sizing: border-box
 
 // Основые цвета
-$color-black: #1E1E1E
+$color-black: #0B0B0B
+$color-grey: #1E1E1E
 $color-white: #F8F8F8
 $color-green: #02FE0E
 $color-blue: #1619CE
@@ -217,15 +218,65 @@ button
     position: relative
     display: flex
     justify-content: center
-    &__content
-        height: 20rem
+    margin-bottom: 18rem
+
 
 .section-third
     // position: relative
     // display: flex
     // justify-content: center
     &__grey-box
+        display: flex
+        align-items: center
         width: 100%
         height: 36rem
-        background-color: red
+        background-color: $color-grey
+        border-radius: 3rem
+    &__box-skills
+        display: flex
+        align-content: space-between
+        flex-wrap: wrap
+        overflow: hidden
+        position: absolute
+        left: 0
+        width: 99vw
+        height: 20rem
+        &_top
+            display: flex
+            height: 8rem
+            width: 99vw
+        &_bot
+            display: flex
+            height: 8rem
+            width: 99vw
+        
+        
+    
+.skill
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 29rem
+    height: 8rem
+    background-color: $color-blue
+    color: $color-white
+    border-radius: 4rem
+    text-align: center
+    vertical-align: middle   
+    animation: slide 60s linear infinite
+    &_bot
+        position: relative
+        left: 10%
+    &:not(:last-child)
+        margin-right: 15rem
+
+
+
+@keyframes slide
+    0%
+        transform: translate3d(0, 0, 0)
+
+    100%
+        transform: translate3d(-2200px, 0, 0)
 
