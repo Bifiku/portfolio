@@ -228,6 +228,7 @@ button
     &__grey-box
         display: flex
         align-items: center
+        justify-content: center
         width: 100%
         height: 36rem
         background-color: $color-grey
@@ -236,17 +237,16 @@ button
         display: flex
         align-content: space-between
         flex-wrap: wrap
-        overflow: hidden
-        position: absolute
-        left: 0
         width: 99vw
         height: 20rem
         &_top
             display: flex
+            justify-content: center
             height: 8rem
             width: 99vw
         &_bot
             display: flex
+            justify-content: center
             height: 8rem
             width: 99vw
         
@@ -264,19 +264,10 @@ button
     border-radius: 4rem
     text-align: center
     vertical-align: middle   
-    animation: slide 60s linear infinite
-    &_bot
-        position: relative
-        left: 10%
+    transition: all .2s
+    &:hover
+        transform: scale(1.3)
+        
     &:not(:last-child)
         margin-right: 15rem
-
-
-
-@keyframes slide
-    0%
-        transform: translate3d(0, 0, 0)
-
-    100%
-        transform: translate3d(-2200px, 0, 0)
 
