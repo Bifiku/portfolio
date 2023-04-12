@@ -280,6 +280,10 @@ button {
   width: 99vw;
 }
 
+.section-four__text-block {
+  color: #F8F8F8;
+}
+
 .skill {
   position: relative;
   display: flex;
