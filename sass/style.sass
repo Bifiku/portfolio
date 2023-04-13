@@ -124,6 +124,7 @@ button
     position: relative
     align-items: center
     background-color: $color-white
+    color: $color-black
     width: 28rem
     height: 13rem
     border-radius: 2rem
@@ -330,3 +331,11 @@ button
     &:not(:last-child)
         margin-right: 15rem
 
+.gradient
+    background: radial-gradient(circle, rgba(80,198,234,1) 0%, rgba(65,136,227,1) 100%)
+.rotate
+    &_plus
+        transform: rotate(5deg)
+    &_minus
+        transform: rotate(-2deg)
+    

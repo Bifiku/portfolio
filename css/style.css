@@ -144,6 +144,7 @@ button {
   position: relative;
   align-items: center;
   background-color: #F8F8F8;
+  color: #0B0B0B;
   width: 28rem;
   height: 13rem;
   border-radius: 2rem;
@@ -377,4 +378,15 @@ button {
 }
 .skill:not(:last-child) {
   margin-right: 15rem;
+}
+
+.gradient {
+  background: radial-gradient(circle, rgb(80, 198, 234) 0%, rgb(65, 136, 227) 100%);
+}
+
+.rotate_plus {
+  transform: rotate(5deg);
+}
+.rotate_minus {
+  transform: rotate(-2deg);
 }/*# sourceMappingURL=style.css.map */
