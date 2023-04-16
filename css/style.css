@@ -42,9 +42,10 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background: #0B0B0B;
   font-size: 1.6rem;
-  height: 380rem;
+  padding-bottom: 10rem;
 }
 
 a {
@@ -116,6 +117,34 @@ input {
   line-height: 1.6rem;
 }
 
+.input {
+  position: relative;
+}
+.input:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+.input__file {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+textarea {
+  font-family: "Montserrat";
+  color: #F8F8F8;
+  background-color: #1E1E1E;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  resize: none;
+}
+
 .container {
   display: block;
   margin: 0 auto;
@@ -152,8 +181,11 @@ input {
 
 .btn {
   position: relative;
-  width: 24rem;
-  height: 7rem;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2rem 2rem;
+  height: -moz-max-content;
+  height: max-content;
   color: #F8F8F8;
   background-color: #0B0B0B;
   border-radius: 1.5rem;
@@ -167,6 +199,11 @@ input {
   border-radius: 100%;
   font-size: 1.4rem;
   box-shadow: 0rem -0.6rem 4.5rem rgba(1, 1, 1, 0.2);
+}
+.btn_input {
+  font-size: 1.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.8rem;
 }
 
 .card {
@@ -265,7 +302,7 @@ input {
 .section-first__main-box {
   width: 100%;
   height: 54rem;
-  background: url(../img/background.png) center/contain no-repeat;
+  background: url(../img/background.png) center/cover no-repeat;
   border-radius: 4rem;
   padding: 4.5rem 15rem;
   text-align: center;
@@ -388,16 +425,20 @@ input {
   line-height: 2rem;
 }
 .section-six__contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: absolute;
   left: 34rem;
   width: 100vw;
   height: 100%;
-  padding: 5rem 13.5rem;
+  padding: 6.5rem 13.5rem;
   border-radius: 3rem;
   background-color: #1E1E1E;
+}
+.section-six__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 34rem;
 }
 
 .big-card {
@@ -532,19 +573,12 @@ input {
   background-color: #1619CE;
 }
 
-.input {
-  position: relative;
-}
-.input:not(:last-child) {
-  margin-bottom: 3.5rem;
-}
-
 .outline::after {
   content: "";
   position: absolute;
   top: 3rem;
   left: 0;
-  width: 33.5rem;
+  width: 100%;
   height: 0.1rem;
   background-color: #7C7C7C;
 }

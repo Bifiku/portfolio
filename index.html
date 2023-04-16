@@ -28,7 +28,7 @@
                 <div class="section-first__main-box">
                     <div class="logo"></div>
                     <h1 class="title-h1">Одна из самых креативных и передовых команд</h1>
-                    <button class="btn">Отправить резюме</button>
+                    <button class="btn">Отправить предложение</button>
                 </div>
                 <div class="section-first__cards">
                     <div class="card card__card-1 card_star">Мы поможем создать c нуля, развить продающие сайты и приложения</div>
@@ -86,13 +86,13 @@
             <section class="section-five">
                 <div class="section-five__content">
                     <div class="section-five__text-wrapper">
-                        <h2 class="margin-bottom-30px">ОТКРЫТЫЕ ВАКАНСИИ</h2>
+                        <h2 class="margin-bottom-10px">ОТКРЫТЫЕ ВАКАНСИИ</h2>
                         <p class="paragraph">У нас работают только лучшие специалисты Digital-сферы</p>
                     </div>
                     <div class="section-five__slider">
                         <div class="slider">
-                            <div class="slider__arrow slider__arrow_left arrow"></div>
-                            <div class="slider__arrow slider__arrow_right arrow"></div>
+                            <button class="slider__arrow slider__arrow_left arrow"></button>
+                            <button class="slider__arrow slider__arrow_right arrow"></button>
                             <div class="slider__items">
                                 <div class="slider__item">
                                     <img src="img/Group_3.png" alt="Оператор технической поддержки">
@@ -121,20 +121,24 @@
                     </div>
                     <div class="section-six__contact">
                         <div class="section-six__inputs">
-                            <div class="input">
-                            <input type="text" placeholder="Ваше имя">
-                            <div class="outline"></div>
+                            <form action="send.php" method="POST">
+                                <div class="input">
+                                    <input type="text" name="name" placeholder="Ваше имя" required>
+                                    <div class="outline"></div>
+                                </div>
+                                <div class="input">
+                                    <input type="email" name="email" placeholder="Ваш email" required>
+                                    <div class="outline"></div>
+                                </div>
+                                <div class="input">
+                                    <textarea name="message" placeholder="Сообщение" required></textarea>
+                                    <div class="outline"></div>
+                                </div>
+                                <button class="btn blue" type="submit">Отправить предложение</button>
+                            </form>
+                            
                         </div>
-                        <div class="input">
-                            <input type="text" placeholder="Ваше e-mail">
-                            <div class="outline"></div>
-                        </div>
-                        <div class="input">
-                            <input type="text" placeholder="Ваше предложение">
-                            <div class="outline"></div>
-                        </div> 
                     </div>
-                    <button class="btn blue">Отрпавить</button></div>
                 </div>
             </section>
 
