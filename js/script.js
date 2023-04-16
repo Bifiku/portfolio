@@ -1,23 +1,28 @@
-const form = document.querySelector('form');
-const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc1p58KEkdMlWTAEosR9yTFdk6r2wn5bDfUtiW821WzWguu8w/viewform?usp=sf_link'; // Замените ссылку на ссылку на вашу форму
+const form = document.getElementById('my-form');
+const url = 'https://formspree.io/f/xpzeogqv';
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(form);
-
-  fetch(formUrl, {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(url, {
     method: 'POST',
-    body: formData
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: form.name.value,
+      _replyto: form.email.value,
+      message: form.message.value
+    })
   })
   .then(response => {
     if (response.ok) {
-      // Добавьте код, который выполнится при успешной отправке формы
+      alert('Ваше сообщение было успешно отправлено.');
+      form.reset();
     } else {
-      // Добавьте код, который выполнится при неудачной отправке формы
+      throw new Error('Произошла ошибка при отправке сообщения.');
     }
   })
   .catch(error => {
-    // Добавьте код, который выполнится при ошибке отправки формы
+    alert(error.message);
   });
 });
