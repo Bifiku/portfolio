@@ -1,487 +1,48 @@
+@import "_base.sass"
 @import "_fonts.sass"
-
-@mixin button-reset 
-    padding: 0
-    border: none
-    font: inherit
-    color: inherit
-    background-color: transparent
-    cursor: pointer
-   
-@mixin input-reset
-  all: unset
+@import "_layout.sass"
+@import "_components.sass"
 
 
 
-*, ::after, ::before
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-
-// Основые цвета
-$color-black: #0B0B0B
-$color-grey: #1E1E1E
-$color-white: #F8F8F8
-$color-green: #02FE0E
-$color-blue: #1619CE
-$color-sky-blue: #36B5FC
-
-html
-    font-size: 62.5%
-    font-family: "Montserrat"
-    font-weight: 400
-    color: $color-white
 
 
-body
-    overflow-x: hidden
-    background: $color-black
-    font-size: 1.6rem
-    padding-bottom: 10rem
 
-a
-    text-decoration: none
-    color: $color-white
-    &:hover, &:visited
-        color: $color-white
 
-ul
-    list-style-type: none
-    
-header
-    margin-bottom: 6rem
-
-nav
-    display: flex
-    position: relative
-    width: 100%
-    align-items: center
-    justify-content: center
-    height: 6rem
-    font-weight: 500
-    ul
-        display: flex    
-        li:not(:last-child)
-            margin-right: 4rem
         
-.margin-bottom-10px
-    margin-bottom: 1rem
-
-.margin-bottom-30px
-    margin-bottom: 3rem
-
-h1
-    font-weight: 700
-    font-size: 4rem
-    margin-bottom: 3.3rem
-    color: $color-white
-
-h2
-    font-weight: 700
-    font-size: 4rem
-    line-height: 4.9rem
-
-button
-    @include button-reset
-
-input
-    @include input-reset
-    // color: #7C7C7C
-    font-weight: 600
-    font-size: 1.6rem
-    line-height: 1.6rem
-
-.input
-    position: relative
-    &:not(:last-child)
-        margin-bottom: 3.5rem
-    &__file
-        display: none
-        opacity: 0
-        visibility: hidden
-        position: absolute
 
 
-textarea
-    font-family: "Montserrat"
-    color: $color-white
-    background-color: #1E1E1E
-    font-weight: 600
-    font-size: 1.6rem
-    line-height: 1.6rem
-    border: none
-    overflow: auto
-    outline: none
-    -webkit-box-shadow: none
-    -moz-box-shadow: none
-    box-shadow: none
-    width: 100%
-    resize: none
-
-.container
-    display: block
-    margin: 0 auto
-    max-width: 120rem
-    padding: 3rem
-
-.border-line
-    position: absolute
-    right: 0
-    padding-right: 5rem
-    &::after
-        content: ""
-        position: absolute
-        right: 0
-        top: 50%
-        transform: translateY(-50%)
-        width: 19rem
-        height: 6rem
-        border: 1px $color-white solid
-        border-radius: 15px
-        z-index: 1
-
-.logo
-    background: url(../img/logo.png) center/cover no-repeat
-    border-radius: 100%
-    width: 14rem
-    height: 14rem
-    margin: 0 auto
-    margin-bottom: 3.3rem
-
-.btn
-    position: relative
-    width: max-content
-    padding: 2rem 2rem
-    height: max-content
-    color: $color-white
-    background-color: $color-black
-    border-radius: 1.5rem
-    font-size: 1.8rem
-    z-index: 2
-    &_circle
-        // background-color: $color-sky-blue
-        background: url(../img/IMAGE.png) center/cover no-repeat
-        width: 19rem
-        height: 19rem
-        border-radius: 100%
-        font-size: 1.4rem
-        box-shadow: 0rem -.6rem 4.5rem rgba(1, 1, 1, 0.2)
-    &_input
-        font-size: 1.6rem
-        padding: .6rem 1rem
-        border-radius: .8rem
-
-.card
-    display: flex
-    position: relative
-    align-items: center
-    background-color: $color-white
-    color: $color-black
-    width: 28rem
-    height: 13rem
-    border-radius: 2rem
-    font-weight: 500
-    font-size: 1.2rem
-    line-height: 1.5rem
-    padding: 4.8rem
-    &:not(:last-child)
-        margin-right: 4rem
-    &__card-1
-        transform: rotate(-9deg)
-    &__card-2
-        transform: rotate(9deg)
-    &__card-3
-        transform: rotate(-6deg)
-    &__circle
-        position: relative
-        font-size: 1.6rem
-        font-weight: 500
-        color: $color-white
-        line-height: 2rem
-        z-index: 0
-        &_card-1
-            position: absolute
-            background: none
-            border: .2rem $color-white dashed
-            width: 30rem
-            height: 16rem
-            padding: 3rem 4rem
-            left: 23rem
-            top: -6rem
-            transform: rotate(-5deg)
-        &_card-2
-            position: absolute
-            left: 62rem
-            top: -6rem
-            width: 25rem
-            height: 13rem
-            text-align: right
-            transform: rotate(-2.69deg)
-        &_card-3
-            position: absolute
-            left: 29rem
-            top: 13.5rem
-            width: 28rem
-            height: 12rem
-            color: $color-black
-            transform: rotate(4.98deg)
-        &_card-4
-            position: absolute
-            left: 62rem
-            top: 12.5rem
-            width: 24rem
-            height: 13rem
-            text-align: right
-            background: none
-            border: .2rem $color-white dashed   
-            padding: 3rem 4rem
-            transform: rotate(7.51deg)
-    &_star
-        &::after
-            content: ""
-            position: absolute 
-            width: 5.5rem
-            height: 5.5rem
-            top: 0
-            left: 0
-            transform: translate(-50%, -50%)
-            border-radius: 100%
-            background: $color-sky-blue url(../icons/Star.svg) center/3.4rem no-repeat
-            box-shadow: 0rem 0rem 1rem .2rem rgba(1, 1, 1, 0.07)
-
-.section-first
-    position: relative
-    height: 54rem
-    margin-bottom: 24rem
-    &__main-box
-        width: 100%
-        height: 54rem
-        background: url(../img/background.png) center/cover no-repeat
-        border-radius: 4rem
-        padding: 4.5rem 15rem
-        text-align: center
-    &__cards
-        display: flex
-        justify-content: center
-        position: relative
-        top: -5.5rem
-
-.section-second
-    position: relative
-    display: flex
-    justify-content: center
-    margin-bottom: 18rem
 
 
-.section-third
-    margin-bottom: 3.5rem
-    &__grey-box
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 100%
-        height: 36rem
-        background-color: $color-grey
-        border-radius: 3rem
-    &__box-skills
-        display: flex
-        align-content: space-between
-        flex-wrap: wrap
-        width: 99vw
-        height: 20rem
-        &_top
-            display: flex
-            justify-content: center
-            height: 8rem
-            width: 99vw
-        &_bot
-            display: flex
-            justify-content: center
-            height: 8rem
-            width: 99vw
-        
-.section-four
-    width: 100%
-    height: 40rem
-    margin-bottom: 15rem
-    &__text-box
-        display: flex
-        padding: 0 5rem
-        height: 12rem
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 6rem
-    &__text-block
-        display: flex
-        max-width: 22rem
-        color: $color-white
-        font-weight: 400
-        font-size: 1.9rem
-        line-height: 2.3rem
-        &:not(:last-child)
-            margin-right: 8.6rem
-            &::after
-                content: ""
-                position: relative
-                width: .2rem
-                height: 7rem
-                left: 4.2rem
-                background-color: $color-white
-    &__cards-box
-        display: flex
-        justify-content: space-between
 
-.section-five
-    width: 100%
-    height: 43rem
-    margin-bottom: 10rem
-    &__content
-        display: flex
-    &__text-wrapper
-        max-width: 30rem
-    &__slider
-        display: flex
-        justify-content: center
-        width: 100%
 
-.section-six
-    // position: relative
-    &__content
-        display: flex
-        align-items: center
-        position: relative
-        height: 41rem
-    &__text-wrapper
-        position: relatives
-        z-index: 1
-        max-width: 43rem
-        height: 30rem
-        span
-            font-weight: 400
-            font-size: 1.6rem
-            line-height: 2.0rem
-    &__contact
-        position: absolute
-        left: 34rem
-        width: 100vw
-        height: 100%
-        padding: 6.5rem 13.5rem
-        border-radius: 3rem
-        background-color: $color-grey
-    &__inputs
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        height: 100%
-        width: 34rem
 
-.big-card
-    display: flex
-    align-items: center
-    width: 36rem
-    height: 21rem
-    padding: 0 2rem 0 4rem
-    background: url(../img/bg-card-1.png) center/cover no-repeat
-    color: $color-white
-    font-weight: 600
-    font-size: 2rem
-    line-height: 2.4rem
-    border-radius: 2rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
     
-.skill
-    position: relative
-    display: flex
-    align-items: center
-    justify-content: center
-    min-width: 29rem
-    height: 8rem
-    background-color: $color-blue
-    color: $color-white
-    border-radius: 4rem
-    text-align: center
-    vertical-align: middle   
-    transition: all .2s
-    &:hover
-        transform: scale(1.3)
-        
-    &:not(:last-child)
-        margin-right: 15rem
 
-.slider
-    display: flex
-    position: relative
-    align-items: center
-    justify-content: center
-    flex-wrap: wrap
-    align-content: space-between
-    width: 55rem
-    height: 43rem
-    &__arrow
-        transition: .2s all
-        &_left
-            top: 17.8rem
-            left: -6rem
-            &:hover
-                transform: scale(1.3)
-        &_right
-            top: 17.8rem
-            right: -6rem
-            transform: rotate(180deg)
-            &:hover
-                transform: scale(1.3) rotate(180deg)
-    &__items
-        width: 100%
-        height: 39rem
-    &__item
-        display: flex
-        position: relative
-        align-items: center
-        justify-content: center
-        width: 100%
-        height: 100%
-        border-radius: 2rem
-        overflow: hidden   
-        img
-            object-fit: cover
-            width: 100%
-            height: 100%
-        h3
-            position: absolute
-            font-weight: 900
-            font-size: 4rem
-            line-height: 4.9rem
-            text-align: center
-            width: min-content
-    &__wrapper
-        display: flex
-    &__dot
-        width: 1rem
-        height: 1rem
-        border-radius: 100%
-        background-color: #222222
-        &:not(:last-child)
-            margin-right: 1.5rem
 
-.paragraph
-    display: flex
-    flex-wrap: wrap
-    height: 100%
-    font-weight: 600
-    font-size: 2.4rem
-    line-height: 2.9rem
 
-.dot-active
-    transform: scale(1.3)
-    background-color: $color-white
 
-.arrow
-    position: absolute
-    z-index: 1
-    width: 4rem
-    height: 4rem
-    border-radius: 100%
-    background: $color-blue url(../icons/arrow.svg) 1.2rem/30% no-repeat
+
+
+
+
+
     
 
 
@@ -497,29 +58,16 @@ textarea
 
 
 
-.blue
-    background-color: $color-blue
+
 
 
 
         
 
 
-.outline
-    &::after
-        content: ""
-        position: absolute
-        top: 3rem
-        left: 0
-        width: 100%
-        height: .1rem
-        background-color: #7C7C7C
 
-.gradient
-    background: radial-gradient(circle, rgba(80,198,234,1) 0%, rgba(65,136,227,1) 100%)
-.rotate
-    &_plus
-        transform: rotate(5deg)
-    &_minus
-        transform: rotate(-2deg)
+
+
+
+
     

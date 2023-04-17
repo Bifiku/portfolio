@@ -1,0 +1,111 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// Основые цвета
+$color-black: #0B0B0B
+$color-grey: #1E1E1E
+$color-white: #F8F8F8
+$color-green: #02FE0E
+$color-blue: #1619CE
+$color-sky-blue: #36B5FC
+
+@mixin button-reset 
+    padding: 0
+    border: none
+    font: inherit
+    color: inherit
+    background-color: transparent
+    cursor: pointer
+   
+@mixin input-reset
+  all: unset
+
+html
+    font-size: 62.5%
+    font-family: "Montserrat"
+    font-weight: 400
+    color: $color-white
+
+
+body
+    overflow-x: hidden
+    background: $color-black
+    font-size: 1.6rem
+    padding-bottom: 10rem
+
+a
+    text-decoration: none
+    color: $color-white
+    &:hover, &:visited
+        color: $color-white
+
+ul
+    list-style-type: none
+    
+header
+    margin-bottom: 6rem
+
+nav
+    display: flex
+    position: relative
+    width: 100%
+    align-items: center
+    justify-content: center
+    height: 6rem
+    font-weight: 500
+    ul
+        display: flex    
+        li:not(:last-child)
+            margin-right: 4rem
+
+button
+    @include button-reset
+
+input
+    @include input-reset
+    // color: #7C7C7C
+    font-weight: 600
+    font-size: 1.6rem
+    line-height: 1.6rem
+
+textarea
+    font-family: "Montserrat"
+    color: $color-white
+    background-color: #1E1E1E
+    font-weight: 600
+    font-size: 1.6rem
+    line-height: 1.6rem
+    border: none
+    overflow: auto
+    outline: none
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    width: 100%
+    resize: none
+
+.container
+    display: block
+    margin: 0 auto
+    max-width: 120rem
+    padding: 3rem
+
+.margin-bottom-10px
+    margin-bottom: 1rem
+
+.margin-bottom-30px
+    margin-bottom: 3rem
+
+.blue
+    background-color: $color-blue
+
+.gradient
+    background: radial-gradient(circle, rgba(80,198,234,1) 0%, rgba(65,136,227,1) 100%)
+
+.rotate
+    &_plus
+        transform: rotate(5deg)
+    &_minus
+        transform: rotate(-2deg)

@@ -1,0 +1,125 @@
+.section-first
+    position: relative
+    height: 54rem
+    margin-bottom: 24rem
+    &__main-box
+        width: 100%
+        height: 54rem
+        background: url(../img/background.png) center/cover no-repeat
+        border-radius: 4rem
+        padding: 4.5rem 15rem
+        text-align: center
+    &__cards
+        display: flex
+        justify-content: center
+        position: relative
+        top: -5.5rem
+
+.section-second
+    position: relative
+    display: flex
+    justify-content: center
+    margin-bottom: 18rem
+
+
+.section-third
+    margin-bottom: 3.5rem
+    &__grey-box
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 36rem
+        background-color: $color-grey
+        border-radius: 3rem
+    &__box-skills
+        display: flex
+        align-content: space-between
+        flex-wrap: wrap
+        width: 99vw
+        height: 20rem
+        &_top
+            display: flex
+            justify-content: center
+            height: 8rem
+            width: 99vw
+        &_bot
+            display: flex
+            justify-content: center
+            height: 8rem
+            width: 99vw
+        
+.section-four
+    width: 100%
+    height: 40rem
+    margin-bottom: 15rem
+    &__text-box
+        display: flex
+        padding: 0 5rem
+        height: 12rem
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 6rem
+    &__text-block
+        display: flex
+        max-width: 22rem
+        color: $color-white
+        font-weight: 400
+        font-size: 1.9rem
+        line-height: 2.3rem
+        &:not(:last-child)
+            margin-right: 8.6rem
+            &::after
+                content: ""
+                position: relative
+                width: .2rem
+                height: 7rem
+                left: 4.2rem
+                background-color: $color-white
+    &__cards-box
+        display: flex
+        justify-content: space-between
+
+.section-five
+    width: 100%
+    height: 43rem
+    margin-bottom: 10rem
+    &__content
+        display: flex
+    &__text-wrapper
+        max-width: 30rem
+    &__slider
+        display: flex
+        justify-content: center
+        width: 100%
+
+.section-six
+    // position: relative
+    &__content
+        display: flex
+        align-items: center
+        position: relative
+        height: 41rem
+    &__text-wrapper
+        position: relatives
+        z-index: 1
+        max-width: 43rem
+        height: 30rem
+        span
+            font-weight: 400
+            font-size: 1.6rem
+            line-height: 2.0rem
+    &__contact
+        position: absolute
+        left: 34rem
+        width: 100vw
+        height: 100%
+        padding: 6.5rem 13.5rem
+        border-radius: 3rem
+        background-color: $color-grey
+    &__inputs
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        width: 34rem
