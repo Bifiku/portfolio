@@ -46,8 +46,23 @@ nav {
 nav ul {
   display: flex;
 }
-nav ul li:not(:last-child) {
+
+.nav-menu {
+  transition: 0.3s all;
+}
+.nav-menu:not(:last-child) {
   margin-right: 4rem;
+}
+.nav-menu:hover:not(:last-child) {
+  transform: scale(1.1);
+  color: #36B5FC;
+}
+.nav-menu a {
+  transition: 0.3s all;
+}
+.nav-menu a:hover:not(:last-child) {
+  transition: 0.3s all;
+  color: #36B5FC;
 }
 
 button {
@@ -338,21 +353,23 @@ h2 {
 }
 
 .border-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 0;
-  padding-right: 5rem;
-}
-.border-line::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   width: 19rem;
   height: 6rem;
   border: 1px #F8F8F8 solid;
   border-radius: 15px;
-  z-index: 1;
+  background: url(../img/background.png) center/cover no-repeat;
+  background-position-x: -20rem;
+  transition: 0.3s all;
+}
+.border-line:hover {
+  background-position-x: 0;
+  color: #F8F8F8;
 }
 
 .logo {

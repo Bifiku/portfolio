@@ -56,9 +56,22 @@ nav
     height: 6rem
     font-weight: 500
     ul
-        display: flex    
-        li:not(:last-child)
-            margin-right: 4rem
+        display: flex
+            
+            
+.nav-menu
+    transition: .3s all
+    &:not(:last-child)
+        margin-right: 4rem
+    &:hover:not(:last-child)
+        transform: scale(1.1)
+        color: $color-sky-blue  
+    a
+        transition: .3s all
+    a:hover:not(:last-child)
+        transition: .3s all
+        color: $color-sky-blue      
+    
 
 button
     @include button-reset

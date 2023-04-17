@@ -22,20 +22,22 @@
         position: absolute
 
 .border-line
+    display: flex
+    justify-content: center
+    align-items: center
     position: absolute
     right: 0
-    padding-right: 5rem
-    &::after
-        content: ""
-        position: absolute
-        right: 0
-        top: 50%
-        transform: translateY(-50%)
-        width: 19rem
-        height: 6rem
-        border: 1px $color-white solid
-        border-radius: 15px
-        z-index: 1
+    top: 0
+    width: 19rem
+    height: 6rem
+    border: 1px $color-white solid
+    border-radius: 15px
+    background: url(../img/background.png) center/cover no-repeat
+    background-position-x: -20rem
+    transition: .3s all
+    &:hover
+        background-position-x: 0
+        color: $color-white
 
 .logo
     background: url(../img/logo.png) center/cover no-repeat
