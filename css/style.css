@@ -54,13 +54,14 @@ nav ul {
   margin-right: 4rem;
 }
 .nav-menu:hover:not(:last-child) {
-  transform: scale(1.1);
   color: #36B5FC;
 }
 .nav-menu a {
+  position: relative;
+  z-index: 1;
   transition: 0.3s all;
 }
-.nav-menu a:hover:not(:last-child) {
+.nav-menu:hover:not(:last-child) a {
   transition: 0.3s all;
   color: #36B5FC;
 }
@@ -363,13 +364,22 @@ h2 {
   height: 6rem;
   border: 1px #F8F8F8 solid;
   border-radius: 15px;
-  background: url(../img/background.png) center/cover no-repeat;
-  background-position-x: -20rem;
+  overflow: hidden;
   transition: 0.3s all;
 }
 .border-line:hover {
-  background-position-x: 0;
   color: #F8F8F8;
+}
+.border-line:hover > div {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.animation-button-bg {
+  position: absolute;
+  width: 32rem;
+  opacity: 0;
+  transition: 0.2s all;
 }
 
 .logo {

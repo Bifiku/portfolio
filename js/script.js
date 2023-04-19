@@ -26,3 +26,17 @@ form.addEventListener('submit', (e) => {
     alert(error.message);
   });
 });
+
+const items = document.querySelectorAll('li');
+
+items.forEach((item, count) => {
+  if(count < (items.length - 1)){
+    item.addEventListener('mouseover', () => {
+      const randomRotation = Math.floor(Math.random() * 15) - 10;
+      item.style.transform = `scale(1.1) rotate(${randomRotation}deg)`;
+    });
+    item.addEventListener('mouseout', () => {
+      item.style.transform = `scale(1) rotate(0)`;
+    });
+  }
+});

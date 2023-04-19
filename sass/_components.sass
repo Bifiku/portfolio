@@ -32,12 +32,20 @@
     height: 6rem
     border: 1px $color-white solid
     border-radius: 15px
-    background: url(../img/background.png) center/cover no-repeat
-    background-position-x: -20rem
+    overflow: hidden
     transition: .3s all
     &:hover
-        background-position-x: 0
         color: $color-white
+    &:hover > div
+        opacity: 1
+        cursor: pointer
+
+
+.animation-button-bg
+    position: absolute
+    width: 32rem
+    opacity: 0
+    transition: .2s all
 
 .logo
     background: url(../img/logo.png) center/cover no-repeat

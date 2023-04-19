@@ -1,12 +1,0 @@
-Adobe After Effects v17.7 Windows 64 render log for project “animation.aep”
-
-Rendering started on 17.04.2023 at 18:14:00
-
-  17.04.2023 18:14:00: Starting composition “tempConverterComp”.
-
-  Output To: C:\Users\A4F7~1\AppData\Local\Temp\Bodymovin\jbg49nm93c\raw\images\img_0.png    17.04.2023 18:14:00: Finished composition “tempConverterComp”.
-
-
-  Total Time Elapsed: 0 Seconds
-Log closed on 17.04.2023 at 18:14:00
-
