@@ -1,3 +1,9 @@
+@keyframes invisibleCards
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.15)
+
 .big-card
     display: flex
     align-items: center
@@ -65,18 +71,32 @@
     border-radius: 1.5rem
     font-size: 1.8rem
     z-index: 2
+    transition: .3s all
+    transform-style: preserve-3d
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0))
     &_circle
-        // background-color: $color-sky-blue
         background: url(../img/IMAGE.png) center/cover no-repeat
         width: 19rem
         height: 19rem
         border-radius: 100%
         font-size: 1.4rem
         box-shadow: 0rem -.6rem 4.5rem rgba(1, 1, 1, 0.2)
+        animation: 2s ease invisibleCards infinite alternate
+        &:hover
+            box-shadow: 0rem -.6rem 4.5rem rgba(1, 1, 1, 0.2)
+        &:active
+            transform: scale(1.4)
     &_input
         font-size: 1.6rem
         padding: .6rem 1rem
         border-radius: .8rem
+    &:hover
+        transform: scale(1.1)
+        filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.2))
+    &:active
+        transform: scale(1.07) translateY(1px)
+        filter: drop-shadow(0px 3.5px 1px rgba(0, 0, 0, 0.2))
+        
 
 .card
     display: flex
@@ -91,14 +111,12 @@
     font-size: 1.2rem
     line-height: 1.5rem
     padding: 4.8rem
+    &:hover
+        transform: scale(1.2)
     &:not(:last-child)
         margin-right: 4rem
-    &__card-1
-        transform: rotate(-9deg)
-    &__card-2
-        transform: rotate(9deg)
-    &__card-3
-        transform: rotate(-6deg)
+    &__card
+        transition: 2s all
     &__circle
         position: relative
         font-size: 1.6rem
@@ -106,6 +124,7 @@
         color: $color-white
         line-height: 2rem
         z-index: 0
+        transition: .5s all
         &_card-1
             position: absolute
             background: none
@@ -251,3 +270,23 @@
         width: 100%
         height: .1rem
         background-color: #7C7C7C
+
+
+.blue
+    background-color: $color-blue
+
+.gradient
+    background: radial-gradient(circle, rgba(80,198,234,1) 0%, rgba(65,136,227,1) 100%)
+
+.rotate
+    &_plus
+        transform: rotate(5deg)
+    &_minus
+        transform: rotate(-2deg)
+
+.hide
+    position: absolute
+    top: 50%
+    left: 50%
+    translate: -50% -50%
+    scale: 0

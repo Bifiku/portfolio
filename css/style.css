@@ -112,21 +112,6 @@ textarea {
   margin-bottom: 3rem;
 }
 
-.blue {
-  background-color: #1619CE;
-}
-
-.gradient {
-  background: radial-gradient(circle, rgb(80, 198, 234) 0%, rgb(65, 136, 227) 100%);
-}
-
-.rotate_plus {
-  transform: rotate(5deg);
-}
-.rotate_minus {
-  transform: rotate(-2deg);
-}
-
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
@@ -204,6 +189,11 @@ h2 {
   display: flex;
   justify-content: center;
   margin-bottom: 18rem;
+}
+.section-second__center-cards {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .section-third {
@@ -326,6 +316,14 @@ h2 {
   width: 34rem;
 }
 
+@keyframes invisibleCards {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
 .big-card {
   display: flex;
   align-items: center;
@@ -403,6 +401,9 @@ h2 {
   border-radius: 1.5rem;
   font-size: 1.8rem;
   z-index: 2;
+  transition: 0.3s all;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0));
 }
 .btn_circle {
   background: url(../img/IMAGE.png) center/cover no-repeat;
@@ -411,11 +412,26 @@ h2 {
   border-radius: 100%;
   font-size: 1.4rem;
   box-shadow: 0rem -0.6rem 4.5rem rgba(1, 1, 1, 0.2);
+  animation: 2s ease invisibleCards infinite alternate;
+}
+.btn_circle:hover {
+  box-shadow: 0rem -0.6rem 4.5rem rgba(1, 1, 1, 0.2);
+}
+.btn_circle:active {
+  transform: scale(1.4);
 }
 .btn_input {
   font-size: 1.6rem;
   padding: 0.6rem 1rem;
   border-radius: 0.8rem;
+}
+.btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.2));
+}
+.btn:active {
+  transform: scale(1.07) translateY(1px);
+  filter: drop-shadow(0px 3.5px 1px rgba(0, 0, 0, 0.2));
 }
 
 .card {
@@ -432,17 +448,14 @@ h2 {
   line-height: 1.5rem;
   padding: 4.8rem;
 }
+.card:hover {
+  transform: scale(1.2);
+}
 .card:not(:last-child) {
   margin-right: 4rem;
 }
-.card__card-1 {
-  transform: rotate(-9deg);
-}
-.card__card-2 {
-  transform: rotate(9deg);
-}
-.card__card-3 {
-  transform: rotate(-6deg);
+.card__card {
+  transition: 2s all;
 }
 .card__circle {
   position: relative;
@@ -451,6 +464,7 @@ h2 {
   color: #F8F8F8;
   line-height: 2rem;
   z-index: 0;
+  transition: 0.5s all;
 }
 .card__circle_card-1 {
   position: absolute;
@@ -619,4 +633,27 @@ h2 {
   width: 100%;
   height: 0.1rem;
   background-color: #7C7C7C;
+}
+
+.blue {
+  background-color: #1619CE;
+}
+
+.gradient {
+  background: radial-gradient(circle, rgb(80, 198, 234) 0%, rgb(65, 136, 227) 100%);
+}
+
+.rotate_plus {
+  transform: rotate(5deg);
+}
+.rotate_minus {
+  transform: rotate(-2deg);
+}
+
+.hide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  scale: 0;
 }/*# sourceMappingURL=style.css.map */
