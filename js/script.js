@@ -69,5 +69,81 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     });
   });
+
+
+  // Создание карточек Скиллов
+  class Skill{
+    constructor(parentSelector, text, rotate, bg) {
+      this.text = text;
+      this.rotate = rotate;
+      this.bg = bg;
+      this.parentSelector = parentSelector;
+      this.parent = null;
+    }
+
+    checkedParent() {
+      if(this.parentSelector === 'top') {
+        this.parent = document.querySelector('.section-third__box-skills_top');
+      }
+      if(this.parentSelector === 'bottom') {
+        this.parent = document.querySelector('.section-third__box-skills_bot');
+      }
+      return this.parent;
+    }
+
+    render() {
+      this.checkedParent()
+      const div = document.createElement('div');
+      div.innerHTML = `${this.text}`;
+      div.classList.add('skill');
+      this.parent.append(div);
+    }
+  }
+  new Skill('top', 'Веб-разработка').render();
+  new Skill('top', 'Video Production').render();
+  new Skill('top', 'Оптимизация конверсий').render();
+  new Skill('top', 'Управление репутацией').render();
+
+  new Skill('bottom', 'Реклама').render();
+  new Skill('bottom', 'Стратегия бренда').render();
+  new Skill('bottom', 'Поисковая оптимизация').render();
+
+  // Делаем ленту скиллов бесконечной
+  const tape = document.querySelector('.section-third__box-skills_top');
+
+  function displayCards() {
+    const tapeChildren = tape.children; // Получаем дочерние элементы блока со скиллами
+    let tapeChildrenWidth = 0; // ширина всех дочерних блоков
+    const visibleDisplay = Math.floor(document.documentElement.offsetWidth)
+
+    function calcDisplayWidth(){
+      for(let i = 0; i < tapeChildren.length; i++){
+        tapeChildrenWidth += parseFloat(getComputedStyle(tapeChildren[i]).width) + parseFloat(getComputedStyle(tapeChildren[i]).getPropertyValue('margin-right'));
+
+        if(tapeChildrenWidth < visibleDisplay){
+          tape.append(tapeChildren[i].cloneNode(true));
+        }
+
+        if(tapeChildren[i].getBoundingClientRect().left < 0 || tapeChildren[i].getBoundingClientRect().right > visibleDisplay){
+          console.log(tapeChildren[i])
+          tapeChildren[i].remove();
+          
+        }
+      }
+    } 
+    calcDisplayWidth();
+
+    
+  }
+
+  displayCards();
+  
+
+
+
+
+
+
+
 });
 
