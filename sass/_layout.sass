@@ -10,6 +10,7 @@
         padding: 4.5rem 15rem
         text-align: center
     &__cards
+        backface-visibility: hidden
         display: flex
         justify-content: center
         position: relative
@@ -52,6 +53,7 @@
             justify-content: center
             height: 8rem
             width: 99vw
+            // left: 15%
         
 .section-four
     width: 100%
@@ -83,6 +85,8 @@
     &__cards-box
         display: flex
         justify-content: space-between
+    &__big-card
+        overflow: hidden
 
 .section-five
     width: 100%
@@ -91,11 +95,17 @@
     &__content
         display: flex
     &__text-wrapper
-        max-width: 30rem
+        max-width: 30%
     &__slider
+        position: relative
         display: flex
         justify-content: center
-        width: 100%
+        width: 70%
+        height: 39rem
+    &__width
+        display: flex
+        position: relative
+        width: 55rem
 
 .section-six
     // position: relative

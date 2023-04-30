@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js">
-    </script>   
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <!-- Подключаем AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -81,9 +82,24 @@
                     <p class="section-four__text-block">Как горизонтальный, так и вертикальный</p>
                 </div>
                 <div class="section-four__cards-box" data-aos="fade-up">
-                    <div class="section-four__big-card big-card">Уникальные знания и обмен опытом с лучшими специалистами различных Digital-направлений</div>
-                    <div class="section-four__big-card big-card">Стабильная зарплата выше рыночной</div>
-                    <div class="section-four__big-card big-card">Работающие системы онбординга и грейдинга, перспективы роста</div>
+                    <div class="section-four__big-card">
+                        <div class="big-card card-animation-up">
+                            <p>Уникальные знания и обмен опытом с лучшими специалистами различных Digital-направлений</p>
+                        </div>
+                        <div class="big-card big-card__back">Тестовый текст под карточкой, потом напишу</div>
+                    </div>
+                    <div class="section-four__big-card">
+                         <div class="big-card card-animation-up">
+                            <p>Стабильная зарплата выше рыночной</p>
+                        </div>
+                         <div class="big-card big-card__back">Тестовый текст под карточкой, потом напишу</div>
+                    </div>
+                    <div class="section-four__big-card">
+                         <div class="big-card card-animation-up">
+                            <p>Работающие системы онбординга и грейдинга, перспективы роста</p>
+                        </div>
+                         <div class="big-card big-card__back">Тестовый текст под карточкой, потом напишу</div>
+                    </div>
                 </div>
             </section>
             <!-- Пятая секция -->
@@ -94,23 +110,40 @@
                         <p class="paragraph">У нас работают только лучшие специалисты Digital-сферы</p>
                     </div>
                     <div class="section-five__slider">
-                        <div class="slider">
-                            <button class="slider__arrow slider__arrow_left arrow"></button>
-                            <button class="slider__arrow slider__arrow_right arrow"></button>
-                            <div class="slider__items">
-                                <div class="slider__item">
+                        <div class="section-five__width">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
                                     <img src="img/Group_3.png" alt="Оператор технической поддержки">
-                                    <h3>Оператор технической поддержки</h3>
-                                </div>
-                            </div>
-                            <div class="slider__wrapper">
-                                <div class="slider__dot dot-active"></div>
-                                <div class="slider__dot"></div>
-                                <div class="slider__dot"></div>
-                                <div class="slider__dot"></div>
-                                <div class="slider__dot"></div>
-                            </div>
+                                        <h3>Оператор технической поддержки</h3>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/Group_3.png" alt="Оператор технической поддержки">
+                                        <h3>Оператор технической поддержки</h3>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/Group_3.png" alt="Оператор технической поддержки">
+                                        <h3>Оператор технической поддержки</h3>
+                                    </div>
+                                    <div class="swiper-slide">    
+                                        <img src="img/Group_3.png" alt="Оператор технической поддержки">
+                                        <h3>Оператор технической поддержки</h3> 
+                                  </div>
+                                    <div class="swiper-slide">    
+                                        <img src="img/Group_3.png" alt="Оператор технической поддержки">
+                                        <h3>Оператор технической поддержки</h3> 
+                                  </div>
+                                    <div class="swiper-slide">    
+                                        <img src="img/Group_3.png" alt="Оператор технической поддержки">
+                                        <h3>Оператор технической поддержки</h3> 
+                                  </div>
+                                </div>        
+                            </div>    
+                            <div class="swiper-button-next slider__arrow slider__arrow_right arrow"></div>
+                            <div class="swiper-button-prev slider__arrow slider__arrow_left arrow""></div>
+                            <div class="swiper-pagination"></div> 
                         </div>
+                        
                     </div>
                 </div>
             </section>
@@ -156,6 +189,22 @@
 
     
     <script src="js/script.js"></script>
-    <script src="js/json.js"></script>
+    <script src="js/contact.js"></script>
+    
+    <script>
+        let swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 </body>
 </html>

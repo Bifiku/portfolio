@@ -28,7 +28,8 @@ module.exports = {
         "eqeqeq": 0,
         "no-param-reassign": 0,
         "no-plusplus": 0,
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "prefer-const": 0
         // "no-unused-expressions": 0
         // "object-shorthand": 0
     },
