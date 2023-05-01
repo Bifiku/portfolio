@@ -83,10 +83,14 @@ button
 
 input
     @include input-reset
-    // color: #7C7C7C
     font-weight: 600
     font-size: 1.6rem
     line-height: 1.6rem
+    width: 100%
+
+input:-webkit-autofill
+    -webkit-box-shadow:0 0 0 50px $color-grey inset
+    -webkit-text-fill-color: $color-white
 
 textarea
     font-family: "Montserrat"
@@ -107,7 +111,7 @@ textarea
 .container
     display: block
     margin: 0 auto
-    max-width: 120rem
+    max-width: 114rem
     padding: 3rem
 
 .margin-bottom-10px
@@ -115,4 +119,16 @@ textarea
 
 .margin-bottom-30px
     margin-bottom: 3rem
+
+.margin-bottom-60px
+    margin-bottom: 6rem
+
+.margin-bottom-100px
+    margin-bottom: 10rem
+
+.margin-bottom-150px
+    margin-bottom: 15rem
+
+.margin-bottom-200px
+    margin-bottom: 20rem
 

@@ -33,15 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Рандомное вращение карточек (card__card)
   function rotateCards() {
-    const cards = document.querySelectorAll('.card__card');
+    const cards = document.querySelectorAll('.random-rotate');
     cards.forEach(item => {
       const randomRotation = Math.floor(Math.random() * 15) - 5;
       item.style.transform = `rotate3d(0, 0, 1, ${randomRotation}deg)`;
     });
     setTimeout(rotateCards, 1000);
-
   }
-
   rotateCards();
 
   // Кнопка с карточками
@@ -115,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function checkingScreenWidrh(parentSelector){
     // Получаем видимишую ширину экрана клиента
-    const visibleDisplayWidth = document.documentElement.offsetWidth * 2.1;
+    const visibleDisplayWidth = document.documentElement.offsetWidth * 5;
     const sumWidthSkills = calcSumWidthSkills(parentSelector);
     
     if(sumWidthSkills < visibleDisplayWidth){

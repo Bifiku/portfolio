@@ -1,0 +1,129 @@
+@media (min-width: 992px) and (max-width: 1140px)
+    .section-four__text-block:not(:last-child)
+        margin-right: 4rem
+    .section-four__text-block:not(:last-child)::after
+        left: 1.5rem
+    .section-five__slider
+        width: 67%
+    .section-five__text-wrapper
+        max-width: 33%
+    .section-five__width
+        width: 80%
+
+@media (min-width: 576px) and (max-width: 992px)
+    html
+        font-size: 55%
+    nav
+        padding: 2rem
+        justify-content: start
+    .section-first__main-box
+        padding: 4rem 2rem
+    .section-first__cards
+        flex-wrap: wrap
+    .card:hover
+        transform: scale(1.1)
+    .card:not(:last-child)
+        margin: 0
+    .card_star
+        text-align: right
+        padding: 2rem
+        font-size: 1.6rem
+        top: 3rem
+        width: 70%
+    .card_star::after
+        transform: translate(25%, 70%)
+    .card__circle_card-1
+        width: 28rem
+        height: 13rem
+        left: -2%
+    .card__circle_card-3
+        left: 3%
+        top: 74%  
+    .hide
+        left: 50%
+
+    .skill
+        min-width: 25rem
+    .skill:not(:last-child)
+        margin-right: 5rem
+    .section-third__grey-box
+        height: 25rem
+    .skill__animation-top
+        animation: moveLeftTop 50s linear infinite
+    .skill__animation-bottom
+        animation: moveLeftBottom 50s linear infinite
+    .section-four__text-box
+        flex-direction: column
+    .section-four__text-block
+        max-width: 100%
+        padding: 1rem 2rem
+        align-items: center
+    .section-four__text-block:not(:last-child)
+        margin-right: 0
+        margin-bottom: 1.5rem
+    .section-four__text-block:not(:last-child)::before
+        display: none
+    .section-four__text-block::before
+        display: none
+    .section-four__text-block:not(:last-child)::after
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        background: none
+        border-radius: 3rem
+        border: .2rem solid $color-white
+        transition: .3s all
+    .section-four__text-block::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        background: none
+        border-radius: 3rem
+        border: .2rem solid $color-white
+        transition: .3s all
+    .section-four__text-block:hover
+        scale: 1.1
+        color: $color-black
+        transition: .3s all
+        &::after
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            background: white
+            border-radius: 3rem
+            border: .2rem solid $color-white
+            z-index: -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @keyframes moveLeftTop
+        0%
+            translate: 0
+        100%
+            translate: -120rem 
+    @keyframes moveLeftBottom
+        0%
+            translate: 0
+        100%
+            translate: 90rem 
+    

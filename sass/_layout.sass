@@ -1,7 +1,6 @@
 .section-first
     position: relative
-    height: 54rem
-    margin-bottom: 24rem
+    // height: 54rem
     &__main-box
         width: 100%
         height: 54rem
@@ -20,7 +19,6 @@
     position: relative
     display: flex
     justify-content: center
-    margin-bottom: 18rem
     &__center-cards
         position: absolute
         width: 100%
@@ -28,7 +26,6 @@
 
 
 .section-third
-    margin-bottom: 3.5rem
     &__grey-box
         display: flex
         align-items: center
@@ -58,21 +55,41 @@
 .section-four
     width: 100%
     height: 40rem
-    margin-bottom: 15rem
     &__text-box
         display: flex
-        padding: 0 5rem
+        padding: 0 4rem
         height: 12rem
         justify-content: space-between
         align-items: center
-        margin-bottom: 6rem
     &__text-block
+        position: relative
         display: flex
         max-width: 22rem
         color: $color-white
         font-weight: 400
-        font-size: 1.9rem
+        font-size: 1.8rem
         line-height: 2.3rem
+        transition: .3s all
+        cursor: default
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            left: 50%
+            top: 50%
+            transform: translate3d(-50%, -50%, 0)
+            width: 120%
+            height: 160%
+            border-radius: 1.5rem
+            background-color: $color-white
+            color: $color-black
+            opacity: 0
+            transition: .3s all
+            z-index: -1
+        &:hover
+            color: $color-black
+            &::before
+                opacity: 1
         &:not(:last-child)
             margin-right: 8.6rem
             &::after
@@ -86,14 +103,18 @@
         display: flex
         justify-content: space-between
     &__big-card
+        display: flex
+        width: 30%
+        height: 21rem
+        position: relative
         overflow: hidden
 
 .section-five
     width: 100%
     height: 43rem
-    margin-bottom: 10rem
     &__content
         display: flex
+        justify-content: space-between
     &__text-wrapper
         max-width: 30%
     &__slider
