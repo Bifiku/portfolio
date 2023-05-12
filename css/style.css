@@ -9,6 +9,7 @@ html {
   font-family: "Montserrat";
   font-weight: 400;
   color: #F8F8F8;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   background: #000000;
   font-size: 1.6rem;
   padding-bottom: 10rem;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -387,7 +389,7 @@ h4 {
 }
 @keyframes moveLeftTop {
   0% {
-    translate: 0rem;
+    translate: 0;
   }
   100% {
     translate: -176rem;
@@ -395,10 +397,10 @@ h4 {
 }
 @keyframes moveLeftBottom {
   0% {
-    translate: 0rem;
+    translate: 0;
   }
   100% {
-    translate: -132rem;
+    translate: 132rem;
   }
 }
 .input {

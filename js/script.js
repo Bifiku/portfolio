@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     render() {
-      this.checkedParent()
+      this.checkedParent();
       const div = document.createElement('div');
       div.innerHTML = `${this.text}`;
       div.classList.add('skill'); 
