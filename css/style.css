@@ -317,6 +317,10 @@ h5 {
   left: 4.2rem;
   background-color: #F8F8F8;
 }
+.section-four__text-block:last-child::after {
+  content: "";
+  height: 7rem;
+}
 .section-four__cards-box {
   display: flex;
   justify-content: space-between;
@@ -616,7 +620,9 @@ h5 {
 .big-card__back {
   display: flex;
   align-items: flex-end;
-  padding-bottom: 0.6rem;
+  justify-content: center;
+  padding: 0;
+  padding-bottom: 1.7rem;
   position: absolute;
   top: 0;
   background: #F8F8F8;
@@ -794,7 +800,7 @@ h5 {
   width: 100%;
   height: 100%;
 }
-.swiper-slide h4 {
+.swiper-slide h3 {
   position: absolute;
   font-weight: 900;
   line-height: 4.9rem;
