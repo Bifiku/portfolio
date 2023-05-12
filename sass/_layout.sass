@@ -64,6 +64,7 @@
     &__text-block
         position: relative
         display: flex
+        align-items: center
         max-width: 22rem
         color: $color-white
         font-weight: 400
@@ -99,6 +100,10 @@
                 height: 7rem
                 left: 4.2rem
                 background-color: $color-white
+        &:last-child
+            &::after
+                content: ""
+                height: 7rem
     &__cards-box
         display: flex
         justify-content: space-between

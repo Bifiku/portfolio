@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Скиллы в верхней части
   const skillsTextTop = [
     'Веб-разработка',
-    'Video Production',
-    'Оптимизация конверсий',
-    'Управление репутацией'
+    'Работа с GIT',
+    'Работа с Figma',
+    'Адаптивная вёрстка'
   ];
   
   const skillsTextBottom = [
-    'Реклама',
-    'Стратегия бренда',
-    'Поисковая оптимизация'
+    'JavaScript',
+    'REACT',
+    'HTML/CSS (SASS/SCSS)'
   ];
 
   // Анимация при наведении на nav-menu (скейл + рандомное вращение)
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     render() {
-      this.checkedParent()
+      this.checkedParent();
       const div = document.createElement('div');
       div.innerHTML = `${this.text}`;
       div.classList.add('skill'); 

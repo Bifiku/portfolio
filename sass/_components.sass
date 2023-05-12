@@ -6,15 +6,18 @@
 
 @keyframes moveLeftTop
     0%
-        translate: 0rem
+        translate: 0
     100%
-        translate: -176rem
-
+        translate: -176rem 
 @keyframes moveLeftBottom
     0%
-        translate: 0rem
+        translate: 0
     100%
+<<<<<<< HEAD
         translate: 132rem
+=======
+        translate: 132rem 
+>>>>>>> a2996a178f513811dfd2946deb4f0a64809239ce
 
 .input
     position: relative
@@ -147,9 +150,9 @@
             transform: rotate(-2.69deg)
         &_card-3
             position: absolute
-            left: 24%
+            left: 20%
             top: 74%
-            width: 28rem
+            width: 30rem
             height: 12rem
             color: $color-black
             transform: rotate(4.98deg)
@@ -157,7 +160,7 @@
             position: absolute
             left: 55%
             top: 60%
-            width: 24rem
+            width: 26rem
             height: 13rem
             text-align: right
             background: none
@@ -165,6 +168,7 @@
             padding: 3rem 4rem
             transform: rotate(7.51deg)
     &_star
+        z-index: 3
         width: 28rem
         &::after
             content: ""
@@ -196,14 +200,15 @@
     &__back
         display: flex
         align-items: flex-end
-        padding-bottom: .6rem
+        justify-content: center
+        padding: 0
+        padding-bottom: 1.7rem
         position: absolute
         top: 0
         background: $color-white
         color: $color-black
         z-index: 0
         scale: .99
-        // visibility: hidden
     &:hover
         &__back
             opacity: 1
