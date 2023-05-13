@@ -9,13 +9,18 @@
         max-width: 33%
     .section-five__width
         width: 80%
+    .section-four__text-block:last-child::after
+        height: 1rem
 
 @media (min-width: 576px) and (max-width: 992px)
     html
         font-size: 55%
     nav
         padding: 2rem
-        justify-content: start
+        justify-content: center
+    header
+        margin-bottom: 0
+
     .section-first__main-box
         padding: 4rem 2rem
     .section-first__cards
@@ -26,26 +31,45 @@
         margin: 0
     .card_star
         text-align: right
-        padding: 2rem
+        padding: 2rem 2rem 2rem 7rem
+        line-height: 2rem
         font-size: 1.6rem
         top: 3rem
         width: 70%
     .card_star::after
         transform: translate(25%, 70%)
-    .card__circle_card-1
-        width: 28rem
-        height: 13rem
-        left: -2%
+    .btn_circle
+        margin-bottom: 4rem
+    .card__circle
+        position: relative
+        top: auto
+        left: auto
+        width: 40rem
+        height: max-content
+        padding: 3rem 4rem
+    .card__circle:not(:last-child)
+        margin-bottom: 4rem
+    .card__circle_card-2
+        transform: rotate(2.69deg)
     .card__circle_card-3
-        left: 3%
-        top: 74%  
+        transform: rotate(-1.98deg)
+    .card__circle_card-4
+        transform: rotate(2.51deg)
     .hide
-        left: 50%
+        translate: 0 -50%
 
     .skill
         min-width: 25rem
     .skill:not(:last-child)
         margin-right: 5rem
+    .section-second
+        align-items: center
+        flex-direction: column
+    .section-second__center-cards
+        display: flex
+        position: relative
+        flex-direction: column
+        align-items: center
     .section-third__grey-box
         height: 25rem
     .skill__animation-top
@@ -87,6 +111,8 @@
         border-radius: 3rem
         border: .2rem solid $color-white
         transition: .3s all
+    .section-four__text-block:last-child::after
+        height: 100%
     .section-four__text-block:hover
         scale: 1.1
         color: $color-black
@@ -110,12 +136,199 @@
         width: 70%
         height: 20rem
         margin-bottom: 2rem
+    .section-five
+        height: max-content
+    .section-five__content
+        flex-direction: column
+        align-items: center
+    .section-five__text-wrapper
+        max-width: 55rem
+        text-align: center
+        margin-bottom: 2rem
+    .section-five__width
+        width: 100%
+    .section-six__content
+        flex-direction: column
+        height: max-content
+    .section-six__contact
+        position: relative
+        left: 0
+        border-radius: 0
+    .section-six__text-wrapper
+        text-align: center
+        height: max-content
+        max-width: 55rem
+        margin-bottom: 2rem
+    .section-six__text-wrapper span
+        padding-top: 2rem
+
+    .paragraph
+        justify-content: center
+    .border-line
+        display: none
+
+    .margin-bottom-200px
+        margin-bottom: 10rem
 
 
 
+@media (max-width: 575px)
+    html
+        font-size: 55%
+    nav
+        padding: 2rem
+        justify-content: center
+    header
+        margin-bottom: 0
 
+    .section-first__main-box
+        padding: 4rem 2rem
+    .section-first__cards
+        flex-wrap: wrap
+    .card:hover
+        transform: scale(1.1)
+    .card:not(:last-child)
+        margin: 0
+    .card_star
+        text-align: right
+        padding: 2rem 2rem 2rem 7rem
+        line-height: 2rem
+        font-size: 1.6rem
+        top: 3rem
+        width: 70%
+    .card_star::after
+        transform: translate(25%, 70%)
+    .btn_circle
+        margin-bottom: 4rem
+    .card__circle
+        position: relative
+        top: auto
+        left: auto
+        width: 40rem
+        height: max-content
+        padding: 3rem 4rem
+    .card__circle:not(:last-child)
+        margin-bottom: 4rem
+    .card__circle_card-2
+        transform: rotate(2.69deg)
+    .card__circle_card-3
+        transform: rotate(-1.98deg)
+    .card__circle_card-4
+        transform: rotate(2.51deg)
+    .hide
+        translate: 0 -50%
 
+    .skill
+        min-width: 25rem
+    .skill:not(:last-child)
+        margin-right: 5rem
+    .section-second
+        align-items: center
+        flex-direction: column
+    .section-second__center-cards
+        display: flex
+        position: relative
+        flex-direction: column
+        align-items: center
+    .section-third__grey-box
+        height: 25rem
+    .skill__animation-top
+        animation: moveLeftTop 50s linear infinite
+    .skill__animation-bottom
+        animation: moveLeftBottom 50s linear infinite
+    .section-four
+        height: max-content
+    .section-four__text-box
+        flex-direction: column
+        height: max-content
+    .section-four__text-block
+        max-width: 100%
+        padding: 1rem 2rem
+        align-items: center
+    .section-four__text-block:not(:last-child)
+        margin-right: 0
+        margin-bottom: 1.5rem
+    .section-four__text-block:not(:last-child)::before
+        display: none
+    .section-four__text-block::before
+        display: none
+    .section-four__text-block:not(:last-child)::after
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        background: none
+        border-radius: 3rem
+        border: .2rem solid $color-white
+        transition: .3s all
+    .section-four__text-block::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        background: none
+        border-radius: 3rem
+        border: .2rem solid $color-white
+        transition: .3s all
+    .section-four__text-block:last-child::after
+        height: 100%
+    .section-four__text-block:hover
+        scale: 1.1
+        color: $color-black
+        transition: .3s all
+        &::after
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            background: white
+            border-radius: 3rem
+            border: .2rem solid $color-white
+            z-index: -1
 
+    .section-four__cards-box
+        flex-direction: column
+        align-items: center
+
+    .section-four__big-card
+        width: 70%
+        height: 20rem
+        margin-bottom: 2rem
+    .section-five
+        height: max-content
+    .section-five__content
+        flex-direction: column
+        align-items: center
+    .section-five__text-wrapper
+        max-width: 55rem
+        text-align: center
+        margin-bottom: 2rem
+    .section-five__width
+        width: 100%
+    .section-six__content
+        flex-direction: column
+        height: max-content
+    .section-six__contact
+        position: relative
+        left: 0
+        border-radius: 0
+    .section-six__text-wrapper
+        text-align: center
+        height: max-content
+        max-width: 55rem
+        margin-bottom: 2rem
+    .section-six__text-wrapper span
+        padding-top: 2rem
+
+    .paragraph
+        justify-content: center
+    .border-line
+        display: none
+
+    .margin-bottom-200px
+        margin-bottom: 10rem
 
 
 
