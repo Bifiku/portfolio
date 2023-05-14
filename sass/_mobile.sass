@@ -169,18 +169,21 @@
 
     .margin-bottom-200px
         margin-bottom: 10rem
+    .mobile-display-visibility
+        display: block
 
 
 
 @media (max-width: 575px)
     html
-        font-size: 55%
+        font-size: 45%
     nav
         padding: 2rem
         justify-content: center
     header
         margin-bottom: 0
-
+    .nav-menu:not(:last-child)
+        margin-right: 3rem
     .section-first__main-box
         padding: 4rem 2rem
     .section-first__cards
@@ -195,7 +198,7 @@
         line-height: 2rem
         font-size: 1.6rem
         top: 3rem
-        width: 70%
+        width: 90%
     .card_star::after
         transform: translate(25%, 70%)
     .btn_circle
@@ -291,9 +294,10 @@
     .section-four__cards-box
         flex-direction: column
         align-items: center
-
+    .section-five__slider
+        height: 30rem
     .section-four__big-card
-        width: 70%
+        width: 80%
         height: 20rem
         margin-bottom: 2rem
     .section-five
@@ -326,6 +330,8 @@
         justify-content: center
     .border-line
         display: none
+    .mobile-display-visibility
+        display: block
 
     .margin-bottom-200px
         margin-bottom: 10rem
